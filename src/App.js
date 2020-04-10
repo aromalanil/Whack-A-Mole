@@ -5,12 +5,12 @@ import './App.css';
 
 const App=()=> {
   const [score, setScore] = useState(0);
-  const [time,setTime] = useState(5);
+  const [time,setTime] = useState(30);
   const [gameState, setGameState] = useState('start');
 
 
   function gameStart(){
-    setTime(5);
+    setTime(30);
     setScore(0);
     setGameState('game');
   }
