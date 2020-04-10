@@ -12,23 +12,84 @@
 }
 
 .title{
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px #E4F9FA;
   text-shadow: 2px 2px #111;
   font-family: 'Luckiest Guy', cursive;
   font-size: 7rem;
 }
 
+.main-p{
+  text-align: center;
+  line-height: 3rem;
+  background-color: #212121;
+  border-radius: .8rem;
+  padding: 1rem 10rem;
+  border :1px solid;
+  font-size: 1.5rem;
+  color: #E4F9FA;
+  transition: .1s ease-in;
+  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card{
+  padding: 1rem;
+  text-align: center;
+  width: 60vw;
+  max-width: 70%;
+  background-color: #212121;
+  border: 2px solid;
+  color: #E4F9FA;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  height: 70%;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card h2{
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card p{
+  font-size: 1.8rem;
+  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card button{
+  cursor: pointer;
+  margin-top: 5rem;
+  border: none;
+  color: white;
+  border-radius: .8rem;
+  border: 2px solid;
+  padding: 1.5rem 3rem;
+  background-color: green;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card button:focus{
+  outline: none;
+}
+
 .game-grid{
+  transform: rotate(45deg);
   display: grid;
-  grid-template-columns: repeat(3,18rem);
-  grid-template-rows: repeat(3,17rem);
-  column-gap: 5vw;
+  grid-template-columns: repeat(3,12rem);
+  grid-template-rows: repeat(3,12rem);
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
 }
 
 .grid-item{
+  transform: rotate(-45deg);
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -36,6 +97,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .hole{
@@ -50,3 +112,33 @@
   top:-5px;
 }
 
+@media screen and (max-width:940px){
+  .card{
+    width: 80vw;
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width:670px){
+  html{
+    font-size: 8px;
+  }
+  .title{
+    font-size: 5rem;
+  }
+  .game-grid{
+    transform: rotate(0deg);
+  }
+  .grid-item{
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width:460px){
+  .card{
+    width:90vw;
+  }
+  html{
+    font-size: 1.8vw;
+  }
+}
