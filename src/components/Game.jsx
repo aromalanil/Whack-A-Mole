@@ -4,15 +4,15 @@ import MoleHole from './MoleHole';
 const Game=()=>{
     return(
         <div className="game-grid">
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
-            <MoleHole/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={false}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
+            <MoleHole molePoped={true}/>
         </div>
     )
 }
