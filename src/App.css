@@ -28,11 +28,9 @@
   justify-content: space-evenly;
 }
 
-.hole{
-  background-image: url('./img/hole.webp');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+.grid-item{
+  cursor: pointer;
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -40,9 +38,15 @@
   justify-content: center;
 }
 
+.hole{
+  position: absolute;
+  width: 100%;
+  bottom: 2.5rem;
+}
+
 .mole{
   width: 80%;
   position: relative;
-  top:-30px;
+  top:-5px;
 }
 
