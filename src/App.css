@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .title{
@@ -19,6 +19,7 @@
 }
 
 .main-p{
+  margin-top: 2rem;
   text-align: center;
   line-height: 3rem;
   background-color: #212121;
@@ -107,9 +108,10 @@
 }
 
 .mole{
+  transform: scale(1.5);
   width: 80%;
   position: relative;
-  top:-5px;
+  top:-14px;
 }
 
 @media screen and (max-width:940px){
@@ -124,13 +126,19 @@
     font-size: 8px;
   }
   .title{
-    font-size: 5rem;
+    font-size: 6rem;
   }
   .game-grid{
     transform: rotate(0deg);
+    grid-template-columns: repeat(3,calc(80vw / 3));
+  grid-template-rows: repeat(3,calc(90vw / 4));
   }
   .grid-item{
     transform: rotate(0deg);
+  }
+  .mole{
+    transform: scale(1.5);
+    top:-18px;
   }
 }
 
@@ -140,5 +148,8 @@
   }
   html{
     font-size: 1.8vw;
+  }
+  .mole{
+    top:-4vw
   }
 }

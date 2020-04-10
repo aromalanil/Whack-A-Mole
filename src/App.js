@@ -43,7 +43,7 @@ const App=()=> {
     <React.Fragment>
       <h1 className="title">Whack&nbsp;-&nbsp;A&nbsp;-&nbsp;Mole&nbsp;!</h1>
       {getMainContent()}
-      <p className="main-p" style={gameState==='game'?{opacity:'1'}:{opacity:'0'}}>Your&nbsp;Score&nbsp;is&nbsp;:&nbsp;{score} | Time left&nbsp;:&nbsp;{time}</p>
+      <p className="main-p" style={gameState==='game'?{display:'block'}:{display:'none'}}>Your&nbsp;Score&nbsp;is&nbsp;:&nbsp;{score} | Time left&nbsp;:&nbsp;{time}</p>
     </React.Fragment>
   );
 }
