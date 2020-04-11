@@ -2,13 +2,11 @@
 
 <h1 align="center">🎮 Whack A Mole 🎮</h1>
 <div align="center>
-
-<img src="https://img.shields.io/github/forks/aromalanil/Whack-A-Mole" alt=""/> 
-<img src="https://img.shields.io/github/repo-size/aromalanil/Whack-A-Mole"/>
-<img src="https://api.netlify.com/api/v1/badges/8f07dbfb-08ba-4c9d-a5f3-e40c241dcdf9/deploy-status" alt=""/>
-<img src="https://img.shields.io/github/issues/aromalanil/Whack-A-Mole" alt=""/>
-<img src="https://img.shields.io/github/stars/aromalanil/Whack-A-Mole" alt=""/>
-
+  <img src="https://img.shields.io/github/forks/aromalanil/Whack-A-Mole" alt="Forks"/> 
+  <img src="https://img.shields.io/github/repo-size/aromalanil/Whack-A-Mole" alt="Repo Size"/>
+  <img src="https://api.netlify.com/api/v1/badges/8f07dbfb-08ba-4c9d-a5f3-e40c241dcdf9/deploy-status" alt="Build Status"/>
+  <img src="https://img.shields.io/github/issues/aromalanil/Whack-A-Mole" alt="Issues"/>
+  <img src="https://img.shields.io/github/stars/aromalanil/Whack-A-Mole" alt="Stars"/>
 </div>
 
 
