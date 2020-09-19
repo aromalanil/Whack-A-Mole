@@ -1,32 +1,44 @@
-import React,{useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import mole_img from "../img/mole.webp";
+import hit_img from "../img/bang.webp";
 import hole from "../img/hole.webp";
 
-const MoleHole = (props) => {
-  let moleStyle = props.molePopped ? { display: "inline" } : { display: "none" };
-
-  function handleClick() {
-    if (props.molePopped) {
-      props.setScore();
-      moleStyle={display:'none'}
-    }
-  }
-
-  function moleEscaped(){
-      props.moleEscaped();
-  }
+function MoleHole({ molePopped, setScore }) {
+  const [moleState, setMoleState] = useState(molePopped ? "mole" : "no-mole");
 
   useEffect(() => {
-    const timer = setTimeout(moleEscaped, 1000);
-    return () => clearTimeout(timer);
-  });
+    setMoleState(molePopped ? "mole" : "no-mole");
+  }, [molePopped]);
+
+  const handleClick = () => {
+    if (moleState === "mole") {
+      setMoleState("escaped");
+      const hitSound = new Audio("./sfx/hit.mp3");
+      hitSound.play();
+      setScore();
+    }
+  };
 
   return (
     <div className="grid-item" onClick={handleClick}>
       <img className="hole" src={hole} alt="" />
-      <img className="mole" src={mole_img} alt="" style={moleStyle} />
+      <img
+        className={`hole-content ${moleState === "mole" ? "mole" : ""}`}
+        src={getMoleImage(moleState)}
+        alt=""
+      />
     </div>
   );
+}
+
+let getMoleImage = (state) => {
+  if (state === "escaped") {
+    return hit_img;
+  }
+  if (state === "mole") {
+    return mole_img;
+  }
+  return null;
 };
 
 export default MoleHole;
